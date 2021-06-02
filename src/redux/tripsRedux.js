@@ -1,3 +1,4 @@
+import { parseOptionPrice } from '../utils/parseOptionPrice';
 /* SELECTORS */
 
 export const getAllTrips = ({ trips }) => trips;
@@ -12,11 +13,15 @@ export const getFilteredTrips = ({ trips, filters }) => {
   }
 
   // TODO - filter by duration
-
+  const durationMin = filters.duration.from;
+  const durationMax = filters.duration.to;
+  output = output.filter((trip) => trip.days >= durationMin && trip.days <= durationMax);
   // TODO - filter by tags
-
+  if (filters.tags.length) {
+    output = output.filter(trip => filters.tags.every((tag) => trip.tags.includes(tag)));
+  }
   // TODO - sort by cost descending (most expensive goes first)
-
+  output = output.sort((a, b) => parseOptionPrice(b.cost) - parseOptionPrice(a.cost));
   return output;
 };
 
@@ -27,8 +32,6 @@ export const getTripById = ({ trips }, tripId) => {
   filtered.filter((trip) => trip.id == tripId);
   // TODO - filter trips by tripId
 
-  console.log('filtering trips by tripId:', tripId, filtered);
-
   return filtered.length ? filtered[0] : { error: true };
 
 };
@@ -38,8 +41,6 @@ export const getTripsForCountry = ({ trips }, countryCode) => {
 
   filtered = filtered.filter((trip) => trip.country.code == countryCode);
   // TODO - filter trips by countryCode
-
-  console.log('filtering trips by countryCode:', countryCode, filtered);
   return filtered.length ? filtered : [{ error: true }];
 };
 
