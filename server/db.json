@@ -1,0 +1,56 @@
+{
+  "orders": [
+    {
+      "car-rental": "suv",
+      "accommodation": "suite",
+      "features": [
+        "all-inclusive"
+      ],
+      "adults": "2",
+      "children": "3",
+      "name": "12312",
+      "contact": "213123",
+      "start-date": "",
+      "totalCost": "$105,767",
+      "tripId": "5cc1d10181a30e85c8d9ad4a",
+      "countryCode": "TGO",
+      "tripName": "Pleasant trek in outstanding Togo",
+      "id": 1
+    },
+    {
+      "car-rental": "suv",
+      "accommodation": "suite",
+      "features": [
+        "all-inclusive"
+      ],
+      "adults": "2",
+      "children": "3",
+      "name": "12312",
+      "contact": "213123",
+      "start-date": "",
+      "totalCost": "$105,767",
+      "tripId": "5cc1d10181a30e85c8d9ad4a",
+      "countryCode": "TGO",
+      "tripName": "Pleasant trek in outstanding Togo",
+      "id": 2
+    },
+    {
+      "car-rental": "luxury",
+      "accommodation": "house",
+      "features": [
+        "all-inclusive",
+        "pool"
+      ],
+      "adults": "3",
+      "children": "5",
+      "name": "345",
+      "contact": "2134",
+      "start-date": "2021-07-14T19:29:50.000Z",
+      "totalCost": "$175,004",
+      "tripId": "5cc1d10181a30e85c8d9ad4a",
+      "countryCode": "TGO",
+      "tripName": "Pleasant trek in outstanding Togo",
+      "id": 3
+    }
+  ]
+}
